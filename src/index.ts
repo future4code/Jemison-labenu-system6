@@ -1,12 +1,15 @@
-import { searchStudent } from './endpoints/searchStudent';
 import express from "express"
 import cors from 'cors'
 import { ping } from "./endpoints/ping"
 import { searchClass } from './endpoints/searchClass';
-import { createStudent } from './endpoints/createStudent';
+import { searchStudent } from './endpoints/searchStudent';
 import { createClass } from './endpoints/createClass';
 import { changeModule } from './endpoints/changeModule';
 import { changeStudent } from './endpoints/changeStudent';
+import { createStudent } from './endpoints/createStudente';
+import { createDocente } from "./endpoints/createDocent";
+import { searchDocentes } from "./endpoints/searchDocentes";
+import { changeDocente } from "./endpoints/changeDocente";
 
 const app = express()
 
@@ -37,3 +40,12 @@ app.get("/estudante", searchStudent)
 
 //Mudando Turma
 app.patch("/estudante", changeStudent)
+
+//Criando Docentes
+app.post("/docente", createDocente)
+
+//Buscando Docentes
+app.get("/docentes", searchDocentes)
+
+//Mudando Docentes
+app.patch("/docente", changeDocente)

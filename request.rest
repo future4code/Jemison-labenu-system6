@@ -31,10 +31,10 @@ POST http://localhost:3003/estudante
 Content-Type:application/json
 
 {
-    "nome": "AstroDev",
-    "email": "AstroDev@gmail.com",
-    "data_nasci": "1990/12/25",
-    "turma_id": 3
+    "nome": "Sol",
+    "email": "Sol@gmail.com",
+    "data_nasci": "1000/12/25",
+    "turma_id": 2
 }
 
 ### Buscando Estudante
@@ -52,4 +52,27 @@ Content-Type:application/json
 {
     "id" : 9 ,
     "turma_id": 1
+}
+
+### Criando Docente
+POST http://localhost:3003/docente
+Content-Type:application/json
+
+{
+    "nome": "Prof 3",
+    "email": "prof3@gmail.com",
+    "data_nasci": "1990/10/25",
+    "turma_id": 3
+}
+
+### Buscando Docentes
+GET http://localhost:3003/docentes
+
+### Mudando Turma
+PATCH http://localhost:3003/docente
+Content-Type:application/json
+
+{
+    "id" : 2,
+    "turma_id": 2
 }
