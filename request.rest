@@ -1,2 +1,13 @@
 ### Test
 GET http://localhost:3003/ping
+
+### Criando Turma
+POST http://localhost:3003/turma
+Content-Type:application/json
+
+{
+    "nome": "Turma da bagunça"
+}
+
+### Buscando Turmas
+GET http://localhost:3003/turmas
