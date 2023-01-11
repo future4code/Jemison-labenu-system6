@@ -73,6 +73,6 @@ PATCH http://localhost:3003/docente
 Content-Type:application/json
 
 {
-    "id" : 2,
-    "turma_id": 2
+    "id" : 1 ,
+    "turma_id": 1
 }
