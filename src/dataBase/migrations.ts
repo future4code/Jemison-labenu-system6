@@ -56,8 +56,9 @@ CREATE TABLE Docente_especialidade (
 
 `)
     .then(() => {
-        
         console.log(`Tabelas criadas com sucesso!`)
     })
     .catch((error: any) => (error))
 }
+
+createTables()
