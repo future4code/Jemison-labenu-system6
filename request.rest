@@ -1,0 +1,78 @@
+### Test
+GET http://localhost:3003/ping
+
+### Criando Turma
+POST http://localhost:3003/turma
+Content-Type:application/json
+
+{
+    "nome": "Turma iniciantes"
+}
+
+### Buscando Turmas
+GET http://localhost:3003/turmas
+Content-Type:application/json
+
+{
+    "modulo": 6
+}
+
+### Alterar Modulo
+PATCH http://localhost:3003/turma
+Content-Type:application/json
+
+{
+    "id": 2,
+    "modulo": 1
+}
+
+### Criando Estudante
+POST http://localhost:3003/estudante
+Content-Type:application/json
+
+{
+    "nome": "Sol",
+    "email": "Sol@gmail.com",
+    "data_nasci": "1000/12/25",
+    "turma_id": 2
+}
+
+### Buscando Estudante
+GET http://localhost:3003/estudante
+Content-Type:application/json
+
+{
+    "nome": "vanessa"
+}
+
+### Alterar Turma
+PATCH http://localhost:3003/estudante
+Content-Type:application/json
+
+{
+    "id" : 9 ,
+    "turma_id": 1
+}
+
+### Criando Docente
+POST http://localhost:3003/docente
+Content-Type:application/json
+
+{
+    "nome": "Prof 3",
+    "email": "prof3@gmail.com",
+    "data_nasci": "1990/10/25",
+    "turma_id": 3
+}
+
+### Buscando Docentes
+GET http://localhost:3003/docentes
+
+### Mudando Turma
+PATCH http://localhost:3003/docente
+Content-Type:application/json
+
+{
+    "id" : 1 ,
+    "turma_id": 1
+}
